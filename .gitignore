@@ -1,0 +1,5 @@
+debug_*.png
+/tmp/flask.log
+__pycache__/
+*.pyc
+.DS_Store
