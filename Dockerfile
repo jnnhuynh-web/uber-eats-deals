@@ -1,13 +1,11 @@
-FROM python:3.11-slim
+FROM mcr.microsoft.com/playwright/python:v1.52.0-noble
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir playwright==1.52.0 flask==3.1.1
-
-RUN playwright install --with-deps chromium
+RUN pip install --no-cache-dir flask==3.1.1
 
 COPY . .
 
-EXPOSE 80
+EXPOSE 5000
 
 CMD ["python3", "app.py"]
